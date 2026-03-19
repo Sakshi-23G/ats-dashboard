@@ -5,7 +5,7 @@ A fully responsive **Applicant Tracking System (ATS) Dashboard** built with HTML
 ---
 
 ## 🔗 Live Demo
-> 🚀 [View Live]([https://sakshi-23g.github.io/ats-dashboard](https://sakshi-23g.github.io/ats-dashboard/login1.html))
+> 🚀 [View Live](https://sakshi-23g.github.io/ats-dashboard/login1.html)
 
 ---
 

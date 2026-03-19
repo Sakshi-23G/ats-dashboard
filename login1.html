@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- icon  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- css -->
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(#7028e439 0%, #e5b2ca83 100%);
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .card {
+            width: 70%;
+            border: 1px solid black;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            padding: 10px;
+            gap: 0px;
+            border-radius: 25px;
+            background-image: linear-gradient(#7028e4 0%, #e5b2ca 100%);
+            box-shadow: 10px 8px 10px rgb(230, 214, 230);
+        }
+        .card-img {
+            width: 50%; 
+            height: 100%;
+            border-radius: 25px;
+        }
+        .card-img img {
+            width: 100%; 
+            height: 100%;
+            border-radius: 25px;
+        }
+        .card-form {
+            width: 50%;
+            border-radius: 25px;
+            border-style: groove;
+            height: 100%;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+        }
+        .top {
+            width: 30%;
+            height: 30%;
+        }
+        a {
+            text-decoration: none;
+            color: purple;
+        }
+        .btn {
+            background-image: linear-gradient(to right, #7028e4 0%, #e5b2ca 100%);
+            color: rgb(255, 255, 255);
+            width: 40%;
+            font-size: large;
+            letter-spacing: 2px;
+            font-weight: bolder;
+            border-radius: 20px;
+            transition: transform .2s;
+        }
+        .btn:hover {
+            transform: scale(1); 
+        }
+        .form-control {
+            border-radius: 10px;
+        }
+        .form-control:focus {
+            outline-color: #8c01a2;
+            border-color: #8c01a2;
+        }
+        h2 {
+            color: #8c01a2;
+            letter-spacing: 2px;
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+        label {
+            color: purple;
+            font-size: medium;
+            font-weight: 200;
+        }
+        .bottom {
+            margin-bottom: 0px;
+            margin-top: 40px;
+        }
+        .login-container {
+            height: 100%;
+        }
+        .social-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+        .social-icon i {
+            background-color: #ede2e7;
+            border-radius: 50%;
+            padding: 10px;
+        }
+        .social-icon i:hover {
+            background-color: #d779a3;
+            border-radius: 50%;
+            padding: 10px;
+            transform: rotate(20deg);
+        }
+        .text-center {
+            margin-top: 25px;
+            margin-bottom: 30px;
+        }
+        @media screen and (max-width: 500px) {
+            .container {
+                padding: 0px;
+            }
+            .card {
+                width: 100%;
+                border: 2px solid black;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 0px;
+                gap: 0px;
+                border-radius: 25px;
+                overflow: hidden;
+                transition: 0.5s;
+            }
+            .card-img {
+                width: 100%; 
+                height: 35%;
+                z-index: 1;
+                transition: 0.5s;
+            }
+            .card-img img {
+                width: 100%; 
+                height: 100%;
+            }
+            .card-form {
+                width: 100%;
+                border-radius: 25px;
+                border-style: outset;
+                height: 70%;
+                padding: 20px;
+                margin-top: -4px;
+                transition: 0.5s;
+            }
+            .text-center {
+                margin-top: 15px;
+                margin-bottom: 5px;
+            }
+        }
+        @media screen and (max-width: 900px) {
+            .container {
+                padding: 0px;
+            }
+            .card {
+                width: 100%;
+            }
+            .text-center {
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+        }
+        @media screen and (max-width: 1200px) {
+            .text-center {
+                margin-top: 15px;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-img">
+                <a href="create1.html"> <img src="/img/log2.png" alt="Login Image"></a>
+            </div>
+            <div class="card-form">
+                <div class="login-container">
+                    <h2 class="text-center">Login</h2>
+                    <form id="loginForm" class="mt-4">
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                        <div class="d-flex justify-content-between mt-3">
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <center>
+                            <button type="submit" class="btn btn-primary btn-block mt-4">Login</button>
+                        </center>
+                        <div class="social-icon">
+                            <i class='bx bxl-facebook' style="color: blue"></i>
+                            <i class='bx bxl-google' style="color: red;"></i>
+                        </div>
+                        <div class="bottom d-flex justify-content-center mt-3 mb-0">
+                            <a href="create1.html">Don't have an account? Create</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email && password) {
+                // Redirect to the index page after successful login
+                window.location.href = 'index.html';
+            } else {
+                alert('Please fill in both email and password fields.');
+            }
+        });
+    </script>
+</body>
+</html>
